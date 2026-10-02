@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', 'Manrope', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-font="manrope"] {
+  --font-sans: 'Manrope', 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', 'Manrope', sans-serif;
+}
+
+[data-font="inter"] {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+}
+
+[data-font="figtree"] {
+  --font-sans: 'Figtree', system-ui, sans-serif;
+  --font-display: 'Figtree', sans-serif;
+}
+
+[data-font="lexend"] {
+  --font-sans: 'Lexend', system-ui, sans-serif;
+  --font-display: 'Lexend', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased selection:bg-teal-500 selection:text-white min-h-screen overflow-x-hidden;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    letter-spacing: -0.011em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-feature-settings: 'ss01', 'cv01';
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Light, clean-tech, airy UI elements that are joyful and easy on the eyes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04), 0 8px 10px -6px rgba(15, 23, 42, 0.02);
+}
+
+.glass-panel-glow {
+  background: #ffffff;
+  border: 1px solid rgba(13, 148, 136, 0.35);
+  box-shadow: 0 12px 35px -8px rgba(13, 148, 136, 0.12), 0 4px 6px -4px rgba(13, 148, 136, 0.05);
+}
+
+.glass-card-interactive {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-interactive:hover {
+  background: #ffffff;
+  border-color: #0284c7;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -10px rgba(2, 132, 199, 0.15), 0 4px 8px -2px rgba(2, 132, 199, 0.08);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Cheerful, vibrant light background mesh */
+.bg-mesh-vibrant {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(204, 251, 241, 0.6) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(224, 242, 254, 0.6) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(254, 243, 199, 0.35) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(204, 251, 241, 0.4) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(240, 249, 255, 0.7) 0px, transparent 50%);
+}
+
+/* Subtle pattern */
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.25) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
